@@ -2,7 +2,7 @@ import React from "react";
 import { loadState } from "../config/storage";
 import { data } from "./layout-data";
 import { Link, Navigate, Outlet } from "react-router-dom";
-import { Button, Layout, Menu } from "antd";
+import { Button, Flex, Layout, Menu } from "antd";
 import Sider from "antd/es/layout/Sider";
 import { ReactIcon } from "../assets/react-icon";
 import { UnorderedListOutlined } from "@ant-design/icons";
@@ -56,13 +56,22 @@ export const MainLayout = () => {
                 padding: "0 24px 24px",
               }}
             >
-              <Button
+              <Flex
+                align="center"
+                gap={"10px"}
                 style={{ width: "50px", height: "50px" }}
-                type="primary"
-                onClick={() => setState(!state)}
               >
-                <UnorderedListOutlined />
-              </Button>
+                <Button
+                  style={{ width: "50px", height: "50px" }}
+                  type="primary"
+                  onClick={() => setState(!state)}
+                >
+                  <UnorderedListOutlined />
+                </Button>
+                <Link to={'/app/Users'}>
+                <Button>Add Users</Button>
+                </Link>
+              </Flex>
 
               <Content
                 style={{

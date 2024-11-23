@@ -7,10 +7,10 @@ export const data = [
     icon: UserOutlined,
     path: "/app",
   },
-  {
-    id: 2,
-    label: "AddUsers",
-    icon: UserAddOutlined,
-    path: "/app/Users",
-  },
+  // {
+  //   id: 2,
+  //   label: "AddUsers",
+  //   icon: UserAddOutlined,
+  //   path: "/app/Users",
+  // },
 ];

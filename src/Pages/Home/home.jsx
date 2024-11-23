@@ -12,6 +12,7 @@ import React, { useState, useEffect } from "react";
 import { useGetUsers } from "../../service/query/useGetUsers";
 import { useEditUser } from "../../service/mutation/useEditUser";
 import { useDeleteUser } from "../../service/mutation/useDeleteUsers";
+import { Link } from "react-router-dom";
 
 const EditableCell = ({
   editing,
@@ -168,13 +169,9 @@ export const Home = () => {
             >
               Delete
             </Button>
-            <Button
-              type="primary"
-              disabled={editingKey !== ""}
-              onClick={() => edit(record)}
-            >
-              Edit
-            </Button>
+            <Link to={`/app/edit-users/${record.key}`}>
+              <Button type="primary">Edit</Button>
+            </Link>
           </div>
         );
       },
